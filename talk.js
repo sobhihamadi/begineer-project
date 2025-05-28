@@ -8,10 +8,12 @@ document.addEventListener("DOMContentLoaded", () => {
     sendButton.addEventListener("click", () => {
         const messageText = inputField.value.trim();
         if (messageText) {
+            // Add message to chat
             const newMessage = document.createElement("div");
             newMessage.classList.add("message", "user1");
             newMessage.textContent = messageText;
             messagesContainer.appendChild(newMessage);
+
             inputField.value = "";
             messagesContainer.scrollTop = messagesContainer.scrollHeight; // Auto-scroll to the latest message
         }
